@@ -3,11 +3,18 @@ import java.util.*;
 public class Task7_10 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int n;
+        int n = input.nextInt();
+        int count = 2;
         System.out.println("Expected Output: ");
-        System.out.println("The first 10 natural numbers are: ");
-        for (n = 1; n <= 10; n++){
-            System.out.println(n);
+        for (int i = 2; i < n; i++){
+            if(n % i == 0){
+                count++;
+            }
+        }
+        if(count == 2){
+            System.out.println("It is prime number.");
+        }else{
+            System.out.println("It is not prime number.");
         }
     }
 }
